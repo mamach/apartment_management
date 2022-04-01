@@ -2,7 +2,7 @@ import csv
 import numpy
 
 month = 'APRIL-2022'
-
+year = '2022/'
 file = open('params.csv')
 
 csvreader = csv.reader(file)
@@ -38,6 +38,6 @@ rows.insert(0, rowsHeader)
 a = numpy.array(rows)
 
 
-with open( month +'.csv', 'w', newline='') as file:
+with open( year + month +'.csv', 'w', newline='') as file:
     mywriter = csv.writer(file, delimiter=',')
     mywriter.writerows(a)
