@@ -3,6 +3,8 @@ import pandas as pd
 import pdb
 import re
 
+CATEGORY_TYPE='OUT'
+
 trim = re.compile(r'[^\d.,]+')
 
 def drawline():
@@ -42,7 +44,7 @@ print(categories)
 for category in categories:
     if isinstance(category, str):
         # print( "processing category : " + category)
-        category_itemwise_values = df.loc[df['Category']==category, 'OUT'].to_dict()
+        category_itemwise_values = df.loc[df['Category']==category, CATEGORY_TYPE].to_dict()
         itemwise_sum = 0
         for index in category_itemwise_values:
             # print(type(category_itemwise_values[index]))
