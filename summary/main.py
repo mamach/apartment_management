@@ -3,7 +3,7 @@ import pandas as pd
 import pdb
 import re
 
-CATEGORY_TYPE='OUT'
+CATEGORY_TYPE='IN'
 
 trim = re.compile(r'[^\d.,]+')
 
